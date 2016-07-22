@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Scroll-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewScroll" customModule="NVHboutique" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="r9b-cV-KXf">
+                                <rect key="frame" x="20" y="543" width="560" height="37"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changePage:" destination="BYZ-38-t0r" eventType="valueChanged" id="GX8-Oz-Fbx"/>
+                                </connections>
+                            </pageControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Nv-8U-Dh6">
+                                <rect key="frame" x="20" y="28" width="560" height="515"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Ur6-AC-T0Q"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="r9b-cV-KXf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="3Dm-dr-Vb9"/>
+                            <constraint firstItem="3Nv-8U-Dh6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="QQg-e1-9ya"/>
+                            <constraint firstAttribute="trailing" secondItem="r9b-cV-KXf" secondAttribute="trailing" constant="20" id="WBH-HC-hx7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="r9b-cV-KXf" secondAttribute="bottom" constant="20" id="cQW-re-84W"/>
+                            <constraint firstItem="r9b-cV-KXf" firstAttribute="top" secondItem="3Nv-8U-Dh6" secondAttribute="bottom" id="huD-LA-hQn"/>
+                            <constraint firstAttribute="trailing" secondItem="3Nv-8U-Dh6" secondAttribute="trailing" constant="20" id="qcI-ci-L2x"/>
+                            <constraint firstItem="3Nv-8U-Dh6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="qye-LH-Iy3"/>
+                            <constraint firstItem="r9b-cV-KXf" firstAttribute="top" secondItem="3Nv-8U-Dh6" secondAttribute="bottom" id="uLh-9U-Zte"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pageController" destination="r9b-cV-KXf" id="CaI-fL-wHc"/>
+                        <outlet property="scrollView" destination="3Nv-8U-Dh6" id="PJn-jQ-gJx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121" y="144"/>
+        </scene>
+    </scenes>
+</document>
